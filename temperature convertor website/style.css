@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+  }
+  
+  .converter {
+    width: 400px;
+    border: 10px solid #00e1ff;
+    padding: 20px;
+  }
+  
+  .options {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .options select {
+    margin-bottom: 10px;
+  }
+  
+  .result {
+    margin-top: 20px;
+    color: white ;
+  }
+  
+  .result h2 {
+    margin-top: 0;
+  }
+  
