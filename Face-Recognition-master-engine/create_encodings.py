@@ -60,8 +60,6 @@ encoding_file_path = './encoded-images-data.csv'
 training_dir_path = './training-images'
 labels_fName = "labels.pkl"
 
-# Get the folder names in training-dir as labels
-# Encode them in numerical form for machine learning
 labels = _get_training_labels(training_dir_path)
 le = LabelEncoder().fit(labels)
 labelsNum = le.transform(labels)
@@ -69,7 +67,6 @@ nClasses = len(le.classes_)
 dataset = create_dataset(training_dir_path, labelsNum)
 df = pd.DataFrame(dataset)
 
-# if file with same name already exists, backup the old file
 if os.path.isfile(encoding_file_path):
     print("{} already exists. Backing up.".format(encoding_file_path))
     os.rename(encoding_file_path, "{}.bak".format(encoding_file_path))
